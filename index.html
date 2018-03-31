@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Top words used on reddit</title>
+    <link rel="stylesheet" href="master.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content">
+      <div id="Header">
+      <h1 style="margin-bottom: 0;">Top words used on reddit</h1>
+      <p style="margin-top:0; padding-bottom: 10px"> Uses the first 100 results</p>
+      <h1 style="margin: 0; padding-bottom: 10px;" id="test"></h1>
+    </div>
+      <small>What words to use to get on:</small>
+      <select class="update" name="sortType">
+        <option value="top">Top</option>
+        <option value="hot">Hot</option>
+        <option value="new">New</option>
+      </select><br>
+      <small>On: </small><input type="text" name="subreddit" class="update" value="dankmemes"><br>
+      <div id="topOnly">
+        <small>When? </small>
+        <select class="update" name="time">
+          <option value="hour">This hour</option>
+          <option value="day" selected>Today</option>
+          <option value="week">This week</option>
+          <option value="month">This month</option>
+          <option value="year">This year</option>
+          <option value="a">All time</option>
+        </select>
+      </div>
+
+      <table id="table" style="margin-top: 40px;">
+        <tr>
+          <th>Word</th>
+          <th>Times used</th>
+          <th>Procent of total words</th>
+        </tr>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+      window.sr = ScrollReveal();
+      sr.reveal('.scrollReveal');
+
+    </script>
+  </body>
+</html>
